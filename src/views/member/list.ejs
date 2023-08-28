@@ -1,0 +1,17 @@
+<%- include("../default/header") %>
+<table border="1">
+    <tr>
+        <th>아이디</th>
+        <th>비밀번호</th>
+        <th>이름</th>
+        <th>주소</th>
+    </tr>
+    <% for(var i = 0 ; i < list.length ; i++) {%>
+        <tr>
+            <td><%= list[i].ID %></td>
+            <td><%= list[i].PWD %></td>
+            <td><a href="/member/info?id=<%= list[i].ID %>"><%= list[i].NAME %></a></td>
+            <td><%= list[i].ADDR %></td>
+        </tr>
+    <% }%>
+</table>
